@@ -6,7 +6,7 @@ const ButtonPrimary = ({ children, disabled, type, onClick }) => {
       type={type}
       disabled={disabled}
       onClick={onClick}
-      className="btn-about btn-subscribe cursor-pointer rounded-[60px] bg-purple  px-9 py-[18px]
+      className="basis-auto cursor-pointer rounded-[60px] bg-purple px-9 py-[18px]
        text-lg font-bold text-white transition hover:bg-purple-light active:bg-yellow disabled:pointer-events-none disabled:cursor-none disabled:bg-gray"
     >
       {children}

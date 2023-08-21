@@ -11,12 +11,12 @@ const About = () => {
       className="container-2xl relative mx-auto w-full max-w-screen-2xl px-4 pb-8"
       id="about"
     >
-      <div className="bg-beige-light absolute left-0 top-0 -z-10 h-[220px] w-full "></div>
-      <div className="about flex flex-col items-center">
+      <div className="absolute left-0 top-0 -z-10 h-[220px] w-full bg-beige-light "></div>
+      <div className="about flex flex-col justify-center">
         <div className="about-img p-4 pt-10">
           <img src={team} alt="team photo" />
         </div>
-        <div className="flex-col items-center">
+        <div className="flex flex-col items-center justify-center">
           <Subtitle>Давайте знайомитися</Subtitle>
           <Title>Хто ми?</Title>
           <div className="descr">
