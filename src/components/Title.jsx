@@ -1,8 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Title = ({ children }) => {
   return (
-    <h2 className="text-purple font-extrabold mb-8 text-5xl">{children}</h2>
+    <h2 className="mb-8 text-center text-5xl font-extrabold text-purple">
+      {children}
+    </h2>
   );
 };
 

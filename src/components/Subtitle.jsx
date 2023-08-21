@@ -1,16 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
 
 const Subtitle = ({ children }) => {
-  return <SubtitleStyled className="sub-center">{children}</SubtitleStyled>;
+  return (
+    <p className="mb-2 text-center text-lg font-normal uppercase text-orange">
+      {children}
+    </p>
+  );
 };
-
-const SubtitleStyled = styled.p`
-  color: var(--clr-primary-2);
-  font-size: var(--text-lg);
-  font-weight: 400;
-  line-height: normal;
-  text-transform: uppercase;
-`;
 
 export default Subtitle;

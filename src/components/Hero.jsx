@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="info container-2xl mx-auto flex w-full max-w-screen-2xl items-center gap-20 px-4 pb-8 lg:px-10 2xl:px-12 2xl:pb-24">
         <div className="hero-content lg:flex-1">
           <div className="hero-title mb-11">
-            <h1 className="mb-2 text-center text-6xl font-extrabold text-orange sm:mb-4 lg:text-left 2xl:text-7xl ">
+            <h1 className="mb-4 text-center text-6xl font-extrabold text-orange  lg:text-left 2xl:text-7xl ">
               Мрія чи мета?
             </h1>
             <p className="text-center text-3xl font-extrabold text-purple lg:text-left 2xl:text-5xl">

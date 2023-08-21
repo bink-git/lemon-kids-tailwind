@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import ButtonPrimary from "./ButtonPrimary";
 
@@ -26,13 +25,13 @@ const Header = () => {
           <img src={logo} alt="main logo" className="w-60" />
         </a>
       </div>
-      <nav className="flex">
+      <nav>
         <ul className="flex justify-between gap-x-4">
           {links.map((link) => (
-            <li className=" text-purple hover:text-orange" key={link.text}>
+            <li className="text-purple hover:text-orange" key={link.text}>
               <a
                 href={link.href}
-                className="font-3xl font-semibold tracking-wide"
+                className="text-lg font-semibold tracking-wide"
               >
                 {link.text}
               </a>
