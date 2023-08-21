@@ -19,7 +19,7 @@
   }
 
   .advantage {
-    @apply flex h-full w-[325px] gap-x-6;
+    @apply flex h-full w-[350px] cursor-pointer items-center gap-x-6 rounded-full bg-[#f3efe8] px-8 py-5;
   }
 }
 
