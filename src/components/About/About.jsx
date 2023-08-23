@@ -1,19 +1,19 @@
 import React from "react";
-import team from "../assets/team.png";
-import smallCheck from "../assets/check-small.svg";
-import ButtonPrimary from "./ButtonPrimary";
-import Title from "./Title";
-import Subtitle from "./Subtitle";
+import team from "../../assets/team.png";
+import smallCheck from "../../assets/check-small.svg";
+import ButtonPrimary from "../Buttons/ButtonPrimary";
+import Title from "../Text/Title";
+import Subtitle from "../Text/Subtitle";
 
 const About = () => {
   return (
-    <div
-      className="container-2xl relative mx-auto w-full max-w-screen-2xl px-4 pb-8"
+    <section
+      className="about container-2xl relative mx-auto mb-20 w-full max-w-screen-2xl px-4 pb-8"
       id="about"
     >
       <div className="absolute left-0 top-0 -z-10 h-[220px] w-full bg-beige-light "></div>
       <div className="about flex flex-col justify-center">
-        <div className="about-img p-4 pt-10">
+        <div className="about-img mx-auto p-4 pt-10">
           <img src={team} alt="team photo" />
         </div>
         <div className="flex flex-col items-center justify-center">
@@ -53,7 +53,7 @@ const About = () => {
           <ButtonPrimary>Подивитись</ButtonPrimary>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

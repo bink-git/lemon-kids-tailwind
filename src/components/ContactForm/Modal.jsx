@@ -1,8 +1,8 @@
-import React from 'react';
-import Title from './Title';
-import ButtonPrimary from './ButtonPrimary';
-import styled from 'styled-components';
-import { useGlobalContext } from '../context';
+import React from "react";
+import Title from "../Text/Title";
+import ButtonPrimary from "../Buttons/ButtonPrimary";
+import styled from "styled-components";
+import { useGlobalContext } from "../../context";
 
 const Modal = () => {
   const { isModalOpen, closeModal } = useGlobalContext();
@@ -10,7 +10,7 @@ const Modal = () => {
     <Wrapper>
       <div
         className={`${
-          isModalOpen ? 'modal-overlay show-modal' : 'modal-overlay'
+          isModalOpen ? "modal-overlay show-modal" : "modal-overlay"
         }`}
       >
         <div className="modal-container ">

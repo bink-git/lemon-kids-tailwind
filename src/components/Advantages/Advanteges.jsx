@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Title from './Title';
-import { advantages } from '../data.js';
+import React, { useState } from "react";
+import styled from "styled-components";
+import Title from "../Text/Title";
+import { advantages } from "../../data.js";
 
-import Adantage from './Adantage';
+import Adantage from "./Adantage";
 
 const Advanteges = () => {
   const [activeId, setActiveId] = useState(null);
@@ -14,9 +14,9 @@ const Advanteges = () => {
   };
 
   return (
-    <Wrapper>
+    <section className="advantages px-4 pb-8">
       <Title>Наші основні цінності</Title>
-      <div className="advantages">
+      <div className="flex flex-wrap items-center justify-center gap-8 2xl:gap-[60px]">
         {advantages.map((advantage) => {
           return (
             <Adantage
@@ -28,13 +28,11 @@ const Advanteges = () => {
           );
         })}
       </div>
-    </Wrapper>
+    </section>
   );
 };
 
 const Wrapper = styled.section`
-  padding: 100px 90px;
-
   h2 {
     text-align: center;
     margin-bottom: 60px;

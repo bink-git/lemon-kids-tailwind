@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/logo.svg";
-import ButtonPrimary from "./ButtonPrimary";
+import logo from "../../assets/logo.svg";
+import ButtonPrimary from "../Buttons/ButtonPrimary";
 
 const links = [
   {

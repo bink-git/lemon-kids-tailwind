@@ -1,15 +1,14 @@
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Reviews from "./components/Reviews";
-import Faq from "./components/Faq";
-import Footer from "./components/Footer";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Reviews from "./components/Reviews/Reviews";
+import Faq from "./components/Faq/Faq";
+import Footer from "./components/Footer/Footer";
 import ContactForm from "./components/ContactForm/ContactForm";
-import styled from "styled-components";
-import Advanteges from "./components/Advanteges";
+import Advanteges from "./components/Advantages/Advanteges";
 
 function App() {
   return (
-    <Wrapper>
+    <div className="app flex flex-col">
       <Hero />
       <About />
       <Advanteges />
@@ -17,13 +16,8 @@ function App() {
       <Faq />
       <ContactForm />
       <Footer />
-    </Wrapper>
+    </div>
   );
 }
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 export default App;
