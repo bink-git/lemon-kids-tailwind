@@ -31,7 +31,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        "hero-bg": "url('./main-bg.jpg')",
+        "hero-bg": "url('./assets/main-bg.jpg')",
       },
     },
   },
