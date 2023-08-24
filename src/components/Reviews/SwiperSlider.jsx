@@ -35,10 +35,10 @@ const SwiperSlider = () => {
         modifier: 2,
         slideShadows: false,
       }}
-      // autoplay={{
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
       breakpoints={{
         // When window width is >= 640px
         // 640: {
