@@ -1,7 +1,7 @@
 import React, { forwardRef, useState } from "react";
 import { PhoneInput, CountrySelector } from "react-international-phone";
 import "react-international-phone/style.css";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 
 const PhoneNumberInput = ({ name, label, onChange, value }) => {
   console.log(value);
@@ -27,6 +27,9 @@ const PhoneNumberInput = ({ name, label, onChange, value }) => {
         inputStyle={{
           borderTopLeftRadius: "0px",
           borderBottomLeftRadius: "0px",
+          border: "1px solid var(--grey-border, #b9bcc3)",
+          borderTopRightRadius: "10px",
+          borderBottomRightRadius: "10px",
           outline: "none",
           width: "20px",
           height: "40px",
@@ -38,6 +41,7 @@ const PhoneNumberInput = ({ name, label, onChange, value }) => {
             borderTopLeftRadius: "10px",
             borderBottomLeftRadius: "10px",
             padding: "8px",
+            backgroundColor: "white",
           },
         }}
         className="phone-input"

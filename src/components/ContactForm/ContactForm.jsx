@@ -11,7 +11,7 @@ import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./validationSchema";
 
-import PhoneNumberInput from "../PhoneNumberInput";
+import PhoneNumberInput from "./PhoneNumberInput";
 import Modal from "./Modal";
 
 const ContactForm = () => {
@@ -51,8 +51,8 @@ const ContactForm = () => {
 
   return (
     <section className="h-full bg-hero-bg bg-cover bg-center bg-no-repeat">
-      <div className="contact-form container-2xl mx-auto flex w-full max-w-screen-2xl items-center px-4 py-8">
-        <div className="form-info flex flex-col 2xl:px-[50px] 2xl:pb-[70px] 2xl:pt-[90px]">
+      <div className="contact-form container-2xl mx-auto flex w-full max-w-screen-2xl items-center px-4 py-8 xl:p-0">
+        <div className="form-info flex flex-col xl:max-w-[870px] xl:px-6 ">
           <Subtitle>зворотна форма</Subtitle>
           <Title>Залишились питання? Або бажаєте зворотній дзвінок?</Title>
           <p className="mb-6 px-5 text-base font-semibold text-purple-dark">
@@ -62,61 +62,64 @@ const ContactForm = () => {
           </p>
 
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="inputs mb-14 flex flex-col items-center 2xl:flex-row 2xl:justify-between">
-              <div className="input-group flex w-full max-w-[420px] flex-1 flex-col justify-between">
-                <div className="input input-name">
-                  <label htmlFor="name">ПІБ</label>
-                  <input
-                    type="text"
-                    placeholder="Введіть ваші ПІБ"
-                    id="name"
-                    {...register("name", { required: true })}
-                  />
-                  <p className="error">{errors.name?.message}</p>
-                </div>
+            <div className="inputs mb-14 flex flex-col items-center lg:px-10 ">
+              <div className="lg:flex lg:w-full lg:justify-between lg:gap-8">
+                <div className="input-group flex w-full max-w-[420px] flex-1 flex-col justify-between">
+                  <div className="input input-name">
+                    <label htmlFor="name">ПІБ</label>
+                    <input
+                      type="text"
+                      placeholder="Введіть ваші ПІБ"
+                      id="name"
+                      {...register("name", { required: true })}
+                    />
+                    <p className="error">{errors.name?.message}</p>
+                  </div>
 
-                <div className="input input-email">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    placeholder="Введіть вашу електронну пошту"
-                    id="email"
-                    {...register("email", {
+                  <div className="input input-email">
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      placeholder="Введіть вашу електронну пошту"
+                      id="email"
+                      {...register("email", {
+                        required: true,
+                      })}
+                    />
+                    <p className="error">{errors.email?.message}</p>
+                  </div>
+
+                  <div className="input-phone">
+                    <Controller
+                      name="phone"
+                      control={control}
+                      render={({ field }) => (
+                        <>
+                          <PhoneNumberInput
+                            name={field.name}
+                            label="Телефон"
+                            onChange={field.onChange}
+                            value={field.value}
+                          />
+                          <p className="error">{errors.phone?.message}</p>
+                        </>
+                      )}
+                    />
+                  </div>
+                </div>
+                <div className="textarea">
+                  <label htmlFor="textarea">Коментар</label>
+                  <textarea
+                    id="textarea"
+                    placeholder="Введіть текст"
+                    {...register("textarea", {
                       required: true,
                     })}
-                  />
-                  <p className="error">{errors.email?.message}</p>
+                  ></textarea>
+                  <p className="error">{errors.textarea?.message}</p>
                 </div>
+              </div>
 
-                <div className="input-phone">
-                  <Controller
-                    name="phone"
-                    control={control}
-                    render={({ field }) => (
-                      <>
-                        <PhoneNumberInput
-                          name={field.name}
-                          label="Телефон"
-                          onChange={field.onChange}
-                          value={field.value}
-                        />
-                        <p className="error">{errors.phone?.message}</p>
-                      </>
-                    )}
-                  />
-                </div>
-              </div>
-              <div className="textarea">
-                <label htmlFor="textarea">Коментар</label>
-                <textarea
-                  id="textarea"
-                  placeholder="Введіть текст"
-                  {...register("textarea", {
-                    required: true,
-                  })}
-                ></textarea>
-                <p className="error">{errors.textarea?.message}</p>
-              </div>
               <ButtonPrimary
                 className="btn-form"
                 type="submit"
@@ -130,8 +133,8 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
-        <div className="form-img hidden">
-          <img src={girl} alt="girl" />
+        <div className="form-img hidden xl:block xl:h-full xl:flex-initial ">
+          <img src={girl} alt="girl" className="h-full w-full  object-cover" />
         </div>
         {isSuccess && <Modal />}
       </div>

@@ -2,39 +2,11 @@
   min-height: 450px;
   width: 100%;
   height: 100%;
-  margin-top: 150px;
 }
 
 .swiper-slide {
-  max-width: 370px;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  padding: 17px;
-  border-radius: 6px;
-  background: #fbfbfb;
-  box-shadow: 14.296875px 10.0078125px 28.59375px 0px rgba(0, 0, 0, 0.08);
-  transform: scale(0.7);
-}
-
-.swiper-slide.swiper-slide-active {
-  max-width: 512px;
-  height: 206px;
-  padding: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: scale(1);
-  transition: transform ease-out 1s;
-}
-
-.swiper-slide.swiper-slide-next,
-.swiper-slide.swiper-slide-prev {
-  max-width: 370px;
-  width: 100%;
 }
 
 .swiper-slide.swiper-slide-next .slide-img,

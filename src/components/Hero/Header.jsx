@@ -19,14 +19,14 @@ const links = [
 
 const Header = () => {
   return (
-    <div className="container-2xl mx-auto mb-12 flex w-full max-w-screen-2xl flex-col items-center gap-8 px-4 py-8 lg:px-10 2xl:px-12 2xl:pb-24">
-      <div className="flex-1">
+    <div className="container-2xl mx-auto mb-12 flex w-full max-w-screen-2xl flex-col items-center justify-between gap-8 px-4 py-8 lg:flex-row lg:px-10 2xl:px-12 2xl:pb-24">
+      <div>
         <a href="#">
           <img src={logo} alt="main logo" className="w-60" />
         </a>
       </div>
-      <nav>
-        <ul className="flex justify-between gap-x-4">
+      <nav className="lg:flex-1">
+        <ul className="flex  gap-x-4 ">
           {links.map((link) => (
             <li className="text-purple hover:text-orange" key={link.text}>
               <a

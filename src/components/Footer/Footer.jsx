@@ -12,54 +12,57 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="container-2xl mx-auto flex w-full max-w-screen-2xl flex-col items-center bg-beige-light px-4 py-8">
-      <div className="footer-img mb-10">
-        <img src={logo} alt="main logo" className="mx-auto w-[300px]" />
-      </div>
-
-      <div className="mb-10 flex flex-col">
-        <div className="footer-subscribe flex max-w-[490px] flex-col">
-          <h3 className="mb-6 text-4xl font-bold text-purple">
-            Будьте в курсі нашої історії
-          </h3>
-          <p className="mb-8 text-lg font-semibold text-purple-dark">
-            Приєднуйтесь і будьте першим, хто дізнається про останні новини про
-            тренди, акції та багато іншого!
-          </p>
-          <form className="flex flex-col justify-center">
-            <label htmlFor="email">Email</label>
-            <div className="input-group mb-8 flex flex-col gap-4">
-              <input
-                type="email"
-                placeholder="Введіть вашу електронну пошту"
-                id="email"
-              />
-              <ButtonPrimary className="btn-subscribe w-[100px]">
-                Приєднатись
-              </ButtonPrimary>
+    <div className="bg-beige-light">
+      <footer className="container-2xl mx-auto flex w-full max-w-screen-2xl flex-col items-center px-4 py-8 lg:px-8">
+        <div className="mb-10 flex w-full flex-col items-center justify-center lg:flex-row lg:justify-between">
+          <div className="footer-info">
+            <div className="mb-10">
+              <img src={logo} alt="main logo" className="mx-auto w-[300px]" />
             </div>
-          </form>
+            <div className="footer-subscribe flex max-w-[490px] flex-col">
+              <h3 className="mb-6 text-4xl font-bold text-purple">
+                Будьте в курсі нашої історії
+              </h3>
+              <p className="mb-8 text-lg font-semibold text-purple-dark">
+                Приєднуйтесь і будьте першим, хто дізнається про останні новини
+                про тренди, акції та багато іншого!
+              </p>
+              <form className="flex flex-col justify-center">
+                <label htmlFor="email">Email</label>
+                <div className="input-group mb-8 flex flex-col gap-4">
+                  <input
+                    type="email"
+                    placeholder="Введіть вашу електронну пошту"
+                    id="email"
+                  />
+                  <ButtonPrimary className="btn-subscribe w-[100px]">
+                    Приєднатись
+                  </ButtonPrimary>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="footer-nav">
+            <nav>
+              <ul>
+                {links.map((link) => (
+                  <li
+                    className="mb-4 text-center text-xl font-semibold text-purple hover:text-orange lg:text-left"
+                    key={link.title}
+                  >
+                    <a href={link.href}>{link.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div className="footer-nav">
-          <nav>
-            <ul>
-              {links.map((link) => (
-                <li
-                  className="mb-4 text-xl font-semibold text-purple hover:text-orange"
-                  key={link.title}
-                >
-                  <a href={link.href}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <p className="text-center text-lg text-purple">
-        © 2023 <span className="text-orange">Lemon Kids</span>. Усі права
-        захищені
-      </p>
-    </footer>
+        <p className="text-center text-lg text-purple">
+          © 2023 <span className="text-orange">Lemon Kids</span>. Усі права
+          захищені
+        </p>
+      </footer>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ const Advanteges = () => {
   };
 
   return (
-    <section className="advantages px-4 pb-8">
+    <section className="advantages px-4 py-8 xl:py-12">
       <Title>Наші основні цінності</Title>
       <div className="flex flex-wrap items-center justify-center gap-8 2xl:gap-[60px]">
         {advantages.map((advantage) => {

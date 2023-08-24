@@ -1,12 +1,10 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import stars from "../../assets/stars.svg";
-import commentDots from "../../assets/slide-dots-icon.svg";
 
 const Slide = ({ path }) => {
   return (
-    <div className="flex">
-      <img src={path} alt="slide photo" className="slide-img" />
+    <div className="flex max-w-[500px] items-center gap-6 rounded-[30px] bg-[#FBFBFB] p-4 shadow-xl sm:px-8 sm:py-6">
+      <img src={path} alt="slide photo" className="w-[100px] sm:w-full" />
       <div className="slide-content relative h-full">
         <div className="flex items-center">
           <img src={stars} alt="stars rating" />
@@ -17,11 +15,6 @@ const Slide = ({ path }) => {
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit.
           </p>
-          <img
-            src={commentDots}
-            alt="icon"
-            className="absolute right-[-35px] top-[10px]"
-          />
         </div>
         <div className="slide-author">
           <p className="text-base/4 font-semibold text-purple-dark">

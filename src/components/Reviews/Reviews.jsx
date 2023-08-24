@@ -32,13 +32,13 @@ const slides = [
 const Reviews = () => {
   return (
     <div
-      className="container-2xl mx-auto w-full max-w-screen-2xl items-center px-4  py-8"
+      className="container-2xl mx-auto w-full max-w-screen-2xl items-center px-4 py-8"
       id="reviews"
     >
       <Subtitle className="sub-center">Експертна думка користувачів</Subtitle>
       <Title>Відгуки батьків та педагогів</Title>
-      <div className="relative mx-auto flex h-[400px] w-full  items-center justify-center border-2 border-purple">
-        <img
+      <div className="relative mx-auto flex h-[400px] w-full items-center justify-center">
+        {/* <img
           src={rectPurp}
           alt="rect"
           className="absolute bottom-[30%] left-[30%]"
@@ -47,7 +47,7 @@ const Reviews = () => {
           src={rectOrange}
           alt="rect"
           className="absolute right-[32%] top-[-40px]"
-        />
+        /> */}
 
         {/* <Swiper
           slidesPerView={3}
